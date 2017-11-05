@@ -94,14 +94,13 @@ int main(int argc, char* argv[])
 	int i, j;
 	int globalMinPath[n];
 	adjacencyMatrix = malloc(n * sizeof(double *));
-	
+
 	for(i = 0; i < n; i++) 
 	{
 		adjacencyMatrix[i] = malloc(n * sizeof(double));
 		for(j = 0; j < n; j++)	
 			scanf("%lf", &adjacencyMatrix[i][j]);
 	}
-	
 	char *problem_name = "travelling_salesman_problem";
 	char *approach_name = "naive";
 

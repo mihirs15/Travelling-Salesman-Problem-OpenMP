@@ -64,7 +64,6 @@ void heapOrderPermutation(int* array, int size, double* minCost, int* minPath)
 	int i;
 	// We have reached one possible permutation
 	if(size == 1) {
-		
 		/* Calculate Min Cost for the Hamiltonian cycle associated with the 
 		 * permutation of vertices number stored in array */
 
@@ -114,9 +113,8 @@ int main(int argc, char* argv[])
 		for(j = 0; j < n; j++)	
 			scanf("%lf", &adjacencyMatrix[i][j]);
 	}
-	
+
 	int source = 0;
-	
 	char *problem_name = "travelling_salesman_problem";
 	char *approach_name = "naive";
 
@@ -125,6 +123,7 @@ int main(int argc, char* argv[])
 
 	clock_gettime(CLK, &start_alg);	/* Start the algo timer */
 	double start_time = omp_get_wtime();
+
 	/*----------------------Core algorithm starts here----------------------------------------------*/
 	
 	/* Spawns p parallel threads */
